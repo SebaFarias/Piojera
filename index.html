@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Document</title>
+    <title>Piojera</title>
 </head>
 <body>
+    <div class="header">
+        <h1 class="logo">Piojera</h1>
+        <div class="nav">
+            <a><i class="fas fa-cog"></i></a> 
+        </div>
+    </div>
+        <h1 class="title">Los piojos se matan uno por uno</h1>
+        <form class="todo-form">
+            <div class="input">
+                <input id="todoInput"  type="text">
+                <button class="input-button">
+                    <i class="fas fa-plus-square"></i>
+                </button>
+            </div>            
+            <div class="select">
+                <select name="todos" id="filterTodo">
+                    <option value="all">Todas</option>
+                    <option value="completed">Completadas</option>
+                    <option value="uncompleted">Incompletas</option>
+                </select>
+            </div>
+        </form>
+        <div class="todo-container">
+            <ul class="todo-list">            
+            </ul>
+        </div>
     
     <script src="./js/app.js" type="text/javascript"></script>
 </body>
