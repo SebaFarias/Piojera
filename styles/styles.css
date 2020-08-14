@@ -3,8 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 body{
-    background: radial-gradient(50% 50% at 50% 50%, #2291F2 0%, rgba(255, 255, 255, 0) 100%), #056CF2;
+    background: linear-gradient(to Bottom,#2291F2,#056CF2);/*radial-gradient(50% 50% at 50% 50%, #2291F2 0%,#056CF2 100%) ;*/
     color: #F29F05;
     min-height: 100vh;
 }
@@ -13,12 +18,17 @@ i{
 }
 .header{
     background-color: #F23847;
-    color:#F2B705;   
-    min-width: 100%; 
     height: 10vh;
+}
+.header-visible{
+    min-width: 100vw;
+    height: 10vh;
+    margin: auto;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 .logo{
     font-family: 'Lobster', cursive;
@@ -120,9 +130,12 @@ select{
     outline: none;
     border: none;
     cursor: pointer;
-    background: #36F21D;
-    color: white;
- 
+    background: #23A811;/*36F21D;*/
+    color: white; 
+    transition: all 0.3s ease;
+}
+.complete-btn:hover,.trash-btn:hover{
+    transform: scale(1.05);
 }
 .trash-btn{
     font-size: 1.1rem;   
@@ -130,9 +143,13 @@ select{
     background-color: #F23847;
     border-radius: 0 0.7rem 0.7rem 0;
 }
-.fall{
+.fall-r{
     opacity: 0;
     transform: rotate(-20deg) translateY(8rem);    
+}
+.fall-l{
+    opacity: 0;
+    transform: rotate(20deg) translateY(8rem);    
 }
 .completed{
     text-decoration: line-through;
